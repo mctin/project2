@@ -1,0 +1,544 @@
+@import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#wrapper {
+  max-width: 992px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: "raleway";
+  color: black;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 992px) {
+  /* For general iPad layouts */
+  #wrapper {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+p {
+  font-family: raleway;
+  color: black;
+  font-size: xx-small;
+}
+h1 {
+  font-family: raleway;
+  color: black;
+  font-size: small;
+}
+h2 {
+  font-family: raleway;
+  color: black;
+  text-align: Left;
+  margin: 3% 3%;
+  font-size: smaller;
+}
+h3 {
+  font-family: raleway;
+  color: black;
+  font-weight: 800;
+  text-align: Left;
+  font-size: x-small;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+h4 {
+  font-family: raleway;
+  color: black;
+  text-align: Left;
+  font-weight: 400;
+  font-size: xx-small;
+  padding-top: 6px;
+  padding-left: 3px;
+}
+i {
+  color: #0065fc;
+  background-color: #deebff;
+}
+ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+nav {
+  font-family: raleway;
+  background: white;
+  color: black;
+  text-align: right;
+}
+a {
+  text-decoration: none;
+}
+/*HEADER*/ /*----------------navigation----------------------------*/
+#navbar {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#logo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+  height: 70px;
+}
+.topnav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  align-items: center;
+}
+ul.topnav li a {
+  display: flex;
+  color: black;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+}
+ul.topnav li a:hover:not(.activenav) {
+  color: black;
+}
+ul.topnav li a.activenav {
+  color: #0065fc;
+  border-top: 5px solid #0065fc;
+}
+@media screen and (max-width: 767px) {
+  .topnav {
+    justify-content: space-around;
+  }
+  ul.topnav li a.activenav {
+    border-top: none;
+    border-bottom: 3px solid #0065fc;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/*----------------rechercherbar----------------------------*/
+main {
+  display: flex;
+}
+.maintitle h1 {
+  font-family: raleway;
+  color: black;
+  font-size: large;
+}
+.midnav {
+  display: flex;
+}
+.midnav .location a .pin {
+  color: #052350;
+  background-color: unset;
+}
+.midnav button .fas {
+  color: #052350;
+  background-color: #0065fc;
+  content: "\f041";
+  list-style-type: none;
+}
+.location {
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 15% 0% 0% 15%;
+  overflow: hidden;
+  border: #e2e2e2;
+}
+.midnavtext {
+  padding-left: 5px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  border-left: unset;
+  border-right: unset;
+  font-size: smaller;
+}
+.recherchertext {
+  display: flex;
+  align-items: center;
+  background-color: #0065fc;
+  color: white;
+  padding: 10px 15px 10px 20px;
+  overflow: hidden;
+  border-radius: 0% 15% 15% 0%;
+  border: #0065fc;
+  font-size: smaller;
+}
+.rechercherloup {
+  color: #052350;
+  background-color: #0065fc;
+  list-style-type: none;
+  display: none;
+  padding: 15px;
+  justify-content: center;
+  border-radius: 0% 15% 15% 0%;
+}
+@media screen and (max-width: 767px) {
+  .rechercherloup {
+    display: flex;
+  }
+  .recherchertext {
+    display: none;
+  }
+}
+/*----------------filters----------------------------*/
+ul.midnav2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: left;
+  overflow: hidden;
+  border-radius: 15% 0% 0% 15%;
+  font-size: smaller;
+  height: 5%;
+  margin-left: 10px;
+}
+ul.midnav2 .menu2 :hover {
+  color: lightblue;
+}
+ul.midnav2 li a.active {
+  color: #0065fc;
+  border-top: 5px solid blue;
+}
+.midnav2 .menu2 a .circle_icon {
+  color: #0065fc;
+  background-color: #deebff;
+  padding: 9px;
+  border-radius: 50%;
+  z-index: auto;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  font-size: smaller;
+}
+.menu2 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  padding-right: 20px;
+  max-height: 45px;
+  border-radius: 60px;
+  border-style: solid;
+  border-width: 1px 1px 1px 0px;
+  color: #e2e2e2;
+  margin: 10px 20px 10px 0px;
+}
+@media screen and (max-width: 767px) {
+  .filter {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: normal;
+  }
+}
+/*---------------info-----*/
+.info {
+  display: flex;
+  text-decoration: none;
+  font-size: x-small;
+  background-color: white;
+}
+.info a .info_icon {
+  border-radius: 50%;
+  z-index: auto;
+  color: white;
+  background-color: #0065fc;
+  border-radius: 50%;
+  z-index: auto;
+}
+/*---------------container herberge----*/
+.container_herbcards {
+  display: flex;
+  text-decoration: none;
+  height: 70%;
+}
+/*-------Leftsidehebergements---------*/
+.hebergement {
+  background: #f2f2f2;
+  border-radius: 20px;
+  width: 70%;
+}
+.cartes_hebergements {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.card {
+  flex-wrap: wrap;
+  background-color: white;
+  margin: 1% 1% 1% 1%;
+  width: 30%;
+  height: 150px;
+  border: #f2f2f2 3px solid;
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px #e2e2e2;
+}
+.card img {
+  position: relative;
+  height: 60%;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+}
+.fa-solid.fa-star.fa-xs.grey {
+  color: #f2f2f2;
+}
+div.card:active {
+  border: black 3px solid;
+}
+div.card:hover {
+  border: blue 3px solid;
+}
+.carddiscription {
+  margin-left: 3px;
+}
+/*----------------rightsidepopulaire------------------------*/
+.populairetitle {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+}
+#blackstar {
+  color: black;
+  background-color: transparent;
+}
+.cartes_populaire {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+.rightside_populaire {
+  margin-left: 1%;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+}
+.card2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: white;
+  margin: 9% 1% 1% 1%;
+  border: #f2f2f2 3px solid;
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px #e2e2e2;
+  padding-left: 2px;
+}
+.card2 img {
+  object-fit: cover;
+  border-radius: 15% 0% 0% 15%;
+  padding-right: 10px;
+  height: 90px;
+  width: 100%;
+}
+.cardbody2b {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+}
+.cardimgpop {
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+}
+div.card2:active {
+  border: black 3px solid;
+}
+div.card2:hover {
+  border: blue 3px solid;
+}
+@media screen and (max-width: 767px) {
+  .container_herbcards {
+    height: auto;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .cartes_hebergements {
+    flex-direction: column;
+  }
+  .rightside_populaire {
+    background-color: unset;
+    width: unset;
+  }
+  .hebergement {
+    width: unset;
+    background: unset;
+  }
+  .card {
+    width: unset;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+/*----------------activities----------------------------*/
+.largecard h3 {
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.smallcard h3 {
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.activites {
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.largecard {
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  width: 23%;
+  border: #f2f2f2 3px solid;
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px #e2e2e2;
+  height: 300px;
+}
+.largecard img {
+  height: 260px;
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+div.largecard:active {
+  border: black 3px solid;
+}
+div.largecard:hover {
+  border: blue 3px solid;
+}
+div.smallcard:visited {
+  border: black 3px solid;
+}
+div.smallcard:hover {
+  border: blue 3px solid;
+}
+.images_vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 23%;
+}
+.smallcard {
+  display: flex;
+  flex-direction: column;
+  border: #f2f2f2 3px solid;
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px #e2e2e2;
+  padding-bottom: 5px;
+}
+.smallcardimgfortpom img {
+  height: 100px;
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 7px;
+  padding: 2px;
+}
+.smallcardimgilesdu img {
+  height: 80px;
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 7px;
+  padding: 2px;
+}
+.smallcardimgnotredame img {
+  height: 90px;
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 7px;
+  padding: 2px;
+}
+.smallcardparclong img {
+  height: 90px;
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 7px;
+  padding: 2px;
+}
+@media screen and (max-width: 767px) {
+  .activites {
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    height: unset;
+    margin: 5px;
+  }
+  .largecard {
+    width: 100%;
+    height: unset;
+  }
+  .smallcard {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    height: unset;
+  }
+  .largecard img {
+    height: 100px;
+    width: 100%;
+  }
+  .images_vertical {
+    width: 100%;
+  }
+}
+footer {
+  margin-top: auto;
+  background-color: #f2f2f2;
+}
+.footerlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 10px 0 10px 0;
+  color: black;
+}
+.footerlist1 {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  width: 33%;
+  color: black;
+}
+a:visited {
+  color: black;
+}
+@media screen and (max-width: 767px) {
+  .footerlist {
+    margin: 0;
+    height: 200px;
+    flex-direction: column;
+  }
+}
